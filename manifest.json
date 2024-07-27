@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "XML to HTML Transformer",
+  "version": "1.0",
+  "description": "Transforms XML invoices to HTML using embedded XSLT.",
+  "permissions": ["activeTab", "contextMenus", "scripting","tabs"],
+  "host_permissions": [
+    "*://*/*.xml",
+    "file://*/*.xml"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icons.jpg",
+      "48": "icons/icons.jpg",
+      "128": "icons/icons.jpg"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [ "index.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
